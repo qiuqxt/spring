@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springWeb" />
+        <module name="mybatis" />
+        <module name="trans_sale_aspectj" />
+        <module name="trans_sale_annotation" />
+        <module name="aop" />
+        <module name="springWeb2" />
+        <module name="trans_sale" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="aop" target="1.8" />
+      <module name="mybatis" target="1.8" />
+      <module name="spring_web" target="1.8" />
+      <module name="springWeb" target="1.8" />
+      <module name="springWeb2" target="1.8" />
+      <module name="trans_sale" target="1.8" />
+      <module name="trans_sale_annotation" target="1.8" />
+      <module name="trans_sale_aspectj" target="1.8" />
+      <module name="untitled" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--2、引入属性配置文件 spring-context.xsd
+        location: 指定属性配置文件的位置，使用classpath表示类路径
+    -->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+
+    <!--1、数据源配置-->
+    <bean id="myDataSource" class="com.alibaba.druid.pool.DruidDataSource"
+          init-method="init" destroy-method="close">
+        <property name="url" value="jdbc:mysql://localhost:3306/springdb" />
+        <property name="username" value="root"/>
+        <property name="password" value="2580"/>
+    </bean>
+
+    <!--3、注册SqlSessionFactoryBean-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="myDataSource"/>
+        <!--指定mybatis主配置文件位置-->
+        <property name="configLocation" value="classpath:mybatis.xml"/>
+    </bean>
+
+    <!--动态代理对象-->
+    <!--4、定义Mapper扫描配置器MapperScannerConfigurer-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName"  value="sqlSessionFactory"/>
+        <property name="basePackage" value="com.albert.dao"/>
+    </bean>
+    <!--注册StudentService对象，给属性StudentDao注入值-->
+    <bean id="myStudentService" class="com.albert.service.impl.StudentServiceImpl">
+        <property name="studentDao" ref="studentDao"/>
+    </bean>
+
+</beans>

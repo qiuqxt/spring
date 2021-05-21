@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/aop/aop.iml" filepath="$PROJECT_DIR$/aop/aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/mybatis/mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springWeb/springWeb.iml" filepath="$PROJECT_DIR$/springWeb/springWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springWeb2/springWeb2.iml" filepath="$PROJECT_DIR$/springWeb2/springWeb2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trans_sale/trans_sale.iml" filepath="$PROJECT_DIR$/trans_sale/trans_sale.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trans_sale_annotation/trans_sale_annotation.iml" filepath="$PROJECT_DIR$/trans_sale_annotation/trans_sale_annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trans_sale_aspectj/trans_sale_aspectj.iml" filepath="$PROJECT_DIR$/trans_sale_aspectj/trans_sale_aspectj.iml" />
+    </modules>
+  </component>
+</project>
